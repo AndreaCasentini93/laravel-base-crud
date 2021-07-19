@@ -11953,6 +11953,10 @@ body {
   font-family: "Roboto";
 }
 
+main {
+  margin-top: 120.4px;
+}
+
 ul {
   list-style: unset;
   padding: 0;
@@ -11968,8 +11972,44 @@ a:hover {
   color: unset;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  padding: 45px 0;
+  border-bottom: 4px solid #00000000;
+  margin: 0 20px;
+}
+
+header ul li.active,
+header ul li:hover {
+  border-bottom: 4px solid #3797F6;
+}
+
+header ul li a {
+  font-size: 18px;
+  font-weight: 700;
+  color: #464646;
+}
+
+header ul li a:hover {
+  color: #3797F6;
+}
+
 #cards_section {
-  color: #FFFFFF;
+  padding: 40px 0;
   background-color: #212121;
 }
 
@@ -11977,6 +12017,7 @@ a:hover {
 #cards_section .h2 {
   font-size: 40px;
   font-weight: 700;
+  color: #FFFFFF;
 }
 
 #cards_section .comics_card {
@@ -12000,16 +12041,30 @@ a:hover {
 #cards_section .comics_card h3,
 #cards_section .comics_card .h3 {
   font-size: 16px;
+  color: #FFFFFF;
 }
 
 #cards_section .comics_card h4,
 #cards_section .comics_card .h4 {
   font-size: 14px;
+  color: #FFFFFF;
 }
 
 #cards_section .comics_card h6,
 #cards_section .comics_card .h6 {
   font-size: 12px;
   color: #d3d3d3;
+}
+
+footer {
+  height: 60px;
+  background-color: #303030;
+}
+
+footer p {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #FFFFFF;
 }
 

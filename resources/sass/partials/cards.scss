@@ -1,10 +1,11 @@
 #cards_section {
-    color: $cards_color;
+    padding: 40px 0;
     background-color: $cards_bg;
 
     h2 {
         font-size: 40px;
         font-weight: 700;
+        color: $title_color;
     }
 
     .comics_card {
@@ -26,15 +27,17 @@
 
         h3 {
             font-size: 16px;
+            color: $title_color;
         }
 
         h4 {
             font-size: 14px;
+            color: $title_color;
         }
 
         h6 {
             font-size: 12px;
-            color: #d3d3d3;
+            color: $base_color;
         }
     }
 }
