@@ -19,11 +19,11 @@ class ComicsTableSeeder extends Seeder
             $comics = new Comics();
 
             $comics->title = $item['title'];
+            $comics->slug = Str::slug($item['title'], '-');
             $comics->description = $item['description'];
             $comics->thumb = $item['thumb'];
             $comics->price = $item['price'];
             $comics->series = $item['series'];
-            $comics->slug = Str::slug($item['series'], '-');
             $comics->sale_date = $item['sale_date'];
             $comics->type = $item['type'];
 
