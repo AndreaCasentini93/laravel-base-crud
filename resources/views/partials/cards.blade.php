@@ -1,7 +1,7 @@
 <section id="cards_section">
     <div class="container">
-        <h1>DC Comics Volumes</h1>
-        <div class="d-flex flex-wrap text-center">
+        <h1 class="text-center">DC Comics Volumes</h1>
+        <div class="d-flex flex-wrap text-center align-items-baseline">
             @foreach ($comicsVolumes as $volume)
                 <a href="{{ $volume->slug }}" class="comics_card">
                     <img src="{{ $volume->thumb }}" alt="{{ $volume->title }}">

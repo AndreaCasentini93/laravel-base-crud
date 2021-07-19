@@ -12022,10 +12022,10 @@ header ul li a:hover {
 }
 
 #cards_section .comics_card {
-  width: calc(100% / 6 - 20px);
-  padding: 20px;
+  width: calc(100% / 6 - 30px);
+  padding: 0;
   border-radius: 10px;
-  margin: 10px;
+  margin: 15px;
   transition: transform 0.3s;
 }
 
@@ -12070,6 +12070,44 @@ header ul li a:hover {
 
 #index table {
   margin-top: 20px;
+}
+
+#show {
+  padding: 40px 0;
+}
+
+#show h1,
+#show .h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+#show .comic img {
+  width: 220px;
+  margin-right: 30px;
+}
+
+#show .comic strong {
+  color: #FFFFFF;
+}
+
+#show .comic h2,
+#show .comic .h2,
+#show .comic h3,
+#show .comic .h3,
+#show .comic h4,
+#show .comic .h4,
+#show .comic h6,
+#show .comic .h6 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #d3d3d3;
+}
+
+#show a {
+  margin-top: 30px;
 }
 
 footer {

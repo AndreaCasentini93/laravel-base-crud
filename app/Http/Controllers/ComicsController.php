@@ -14,7 +14,7 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = Comics::paginate(8);
+        $comics = Comics::paginate(6);
         return view('comics.index', compact('comics'));
     }
 
@@ -45,9 +45,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comics $comic)
     {
-        //
+        return view("comics.show", compact('comic'));
     }
 
     /**
