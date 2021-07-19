@@ -11954,7 +11954,9 @@ body {
 }
 
 main {
+  min-height: calc(100vh - 180.4px);
   margin-top: 120.4px;
+  background-color: #212121;
 }
 
 ul {
@@ -12010,7 +12012,6 @@ header ul li a:hover {
 
 #cards_section {
   padding: 40px 0;
-  background-color: #212121;
 }
 
 #cards_section h1,
@@ -12058,7 +12059,6 @@ header ul li a:hover {
 
 #index {
   padding: 40px 0;
-  background-color: #212121;
 }
 
 #index h1,

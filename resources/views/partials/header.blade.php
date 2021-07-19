@@ -8,7 +8,7 @@
                 <a href="{{ route('home') }}">Home</a>
             </li>
             <li class="{{ Route::currentRouteName() == 'comics.index'? 'active':'' }}">
-                <a href="{{ route('comics.index') }}">Comics</a>
+                <a href="{{ route('comics.index') }}">Index</a>
             </li>
         </ul>
     </nav>

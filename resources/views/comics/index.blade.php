@@ -15,7 +15,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    @foreach ($comics as $item)
+                        <tr>
+                            <th>{{ $item->id }}</th>
+                            <th>{{ $item->title }}</th>
+                            <th>
+                                <a href="">SHOW</a>
+                            </th>
+                            <th>
+                                <a href="">EDIT</a>
+                            </th>
+                            <th>
+                                <a href="">DELETE</a>
+                            </th>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
             {{ $comics->links() }}
