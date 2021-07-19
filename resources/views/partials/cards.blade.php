@@ -1,6 +1,6 @@
 <section id="cards_section">
     <div class="container">
-        <h2>DC Comics Volumes</h2>
+        <h1>DC Comics Volumes</h1>
         <div class="d-flex flex-wrap text-center">
             @foreach ($comicsVolumes as $volume)
                 <a href="{{ $volume->slug }}" class="comics_card">

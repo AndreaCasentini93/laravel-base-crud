@@ -12013,8 +12013,8 @@ header ul li a:hover {
   background-color: #212121;
 }
 
-#cards_section h2,
-#cards_section .h2 {
+#cards_section h1,
+#cards_section .h1 {
   font-size: 40px;
   font-weight: 700;
   color: #FFFFFF;
@@ -12054,6 +12054,22 @@ header ul li a:hover {
 #cards_section .comics_card .h6 {
   font-size: 12px;
   color: #d3d3d3;
+}
+
+#index {
+  padding: 40px 0;
+  background-color: #212121;
+}
+
+#index h1,
+#index .h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+#index table {
+  margin-top: 20px;
 }
 
 footer {

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'DC Comics | Home')
+@section('title', 'DC Comics')
 
 @section('main-content')
     @include('partials.cards')
