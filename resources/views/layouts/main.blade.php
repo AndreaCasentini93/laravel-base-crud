@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{-- FAVICON --}}
+        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
         {{-- STYLE CSS --}}
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {{-- TITLE --}}

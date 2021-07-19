@@ -12122,3 +12122,26 @@ footer p {
   color: #FFFFFF;
 }
 
+#error_404 {
+  height: calc(100vh - 180.4px);
+}
+
+#error_404 .container {
+  height: 100%;
+}
+
+#error_404 .container h1,
+#error_404 .container .h1 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+#error_404 .container h3,
+#error_404 .container .h3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #d3d3d3;
+}
+
