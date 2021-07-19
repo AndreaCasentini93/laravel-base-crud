@@ -1,1 +1,20 @@
-//
+  
+// Fontsource
+@import '~@fontsource/roboto/index.css';
+@import '~@fontsource/roboto/500.css';
+@import '~@fontsource/roboto/700.css';
+
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
+
+// General
+@import 'partials/common';
+@import 'partials/variables';
+
+// Partials
+@import 'partials/header';
+@import 'partials/cards';
+@import 'partials/footer';
