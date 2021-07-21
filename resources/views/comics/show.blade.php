@@ -20,8 +20,9 @@
                     <h3><strong>Prezzo</strong>: &euro; {{ $comic->price }}</h3>
                 </div>
             </div>
-            <div class="text-center">
-                <a href="{{ route('comics.index') }}" class="btn btn-primary">Torna alla Lista Fumetti</a>
+            <div class="d-flex justify-content-center">
+                <a href="{{ route('comics.index') }}" class="btn btn-primary">Lista Fumetti</a>
+                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Modifica</a>
             </div>
         </div>
     </section>
