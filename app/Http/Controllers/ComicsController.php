@@ -38,7 +38,14 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        dd($data);
+        $data['slug'] = Str::slug($data['title'], '-');
+
+        $comics = new Comics();
+        $comics->fill($data);
+        $comics->save();
+        return redirect()
+            ->route('comics.show', $comics->id)
+            ->with('message', 'Il Fumetto è stato aggiunto correttamente alla lista');
     }
 
     /**

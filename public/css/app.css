@@ -12085,6 +12085,12 @@ header ul li a:hover {
   color: #FFFFFF;
 }
 
+#show .alert-success {
+  border: unset;
+  color: #3797F6;
+  background-color: unset;
+}
+
 #show .comic img {
   width: 220px;
   margin-right: 30px;

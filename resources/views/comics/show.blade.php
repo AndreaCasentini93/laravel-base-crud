@@ -5,6 +5,9 @@
 @section('main-content')
     <section id="show">
         <div class="container">
+            @if (session('message'))
+                <div class="alert alert-success">{{ session('message') }}</div>
+            @endif
             <h1 class="text-center">{{ $comic->title }}</h1>
             <div class="comic d-flex justify-content-center">
                 <div>
@@ -18,7 +21,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="{{ route('comics.index') }}" class="btn btn-primary">Torna all'Index</a>
+                <a href="{{ route('comics.index') }}" class="btn btn-primary">Torna alla Lista Fumetti</a>
             </div>
         </div>
     </section>
