@@ -20,9 +20,15 @@
                     <h3><strong>Prezzo</strong>: &euro; {{ $comic->price }}</h3>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
-                <a href="{{ route('comics.index') }}" class="btn btn-primary">Lista Fumetti</a>
-                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Modifica</a>
+            <div class="button_box d-flex justify-content-center">
+                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Modifica</a>
+                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" onsubmit="return confirm('Sei sicuro di voler cancellare il fumetto dalla lista?')">
+                    @csrf
+                    @method('DELETE')
+
+                    <input type="submit" class="btn btn-danger" value="Cancella">
+                </form>
+                <a href="{{ route('comics.index') }}" class="btn btn-secondary">Lista Fumetti</a>
             </div>
         </div>
     </section>

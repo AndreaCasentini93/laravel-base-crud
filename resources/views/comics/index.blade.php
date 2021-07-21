@@ -6,6 +6,11 @@
     <section id="index">
         <div class="container">
             <h1 class="text-center">Lista Fumetti DC Comics</h1>
+            @if (session('delete'))
+                <div class="alert alert-success">
+                    {{ session('delete') }}
+                </div>
+            @endif
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>
@@ -26,7 +31,12 @@
                                 <a href="{{ route('comics.edit', $item->id) }}" class="btn btn-warning">EDIT</a>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-danger">DELETE</a>
+                                <form action="{{ route('comics.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Sei sicuro di voler cancellare il fumetto dalla lista?')">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <input type="submit" class="btn btn-danger" value="DELETE">
+                                </form>
                             </td>
                         </tr>
                     @endforeach

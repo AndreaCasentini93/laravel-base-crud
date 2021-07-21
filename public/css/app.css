@@ -12089,6 +12089,12 @@ header ul li a:hover {
   color: #FFFFFF;
 }
 
+#index .alert-success {
+  border: unset;
+  color: #3797F6;
+  background-color: unset;
+}
+
 #index table {
   margin-top: 20px;
 }
@@ -12133,8 +12139,12 @@ header ul li a:hover {
   color: #d3d3d3;
 }
 
-#show a {
-  margin: 30px 5px 0 5px;
+#show .button_box {
+  margin-top: 30px;
+}
+
+#show .button_box a {
+  margin: 0 5px;
 }
 
 #create {
