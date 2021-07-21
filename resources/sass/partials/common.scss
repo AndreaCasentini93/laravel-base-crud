@@ -30,3 +30,20 @@ a {
         color: unset;
     }
 }
+
+.page-item:last-child .page-link {
+    color: $title_color;
+    background-color: $footer_bg;
+}
+.page-item:not(:first-child) .page-link {
+    color: $title_color;
+    background-color: $footer_bg;
+}
+.page-item:first-child .page-link {
+    color: $title_color;
+    background-color: $footer_bg;
+}
+.page-item.active .page-link {
+    border: 1px solid $title_color;
+    background-color: $link_hover;
+}

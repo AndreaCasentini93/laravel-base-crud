@@ -11974,6 +11974,26 @@ a:hover {
   color: unset;
 }
 
+.page-item:last-child .page-link {
+  color: #FFFFFF;
+  background-color: #303030;
+}
+
+.page-item:not(:first-child) .page-link {
+  color: #FFFFFF;
+  background-color: #303030;
+}
+
+.page-item:first-child .page-link {
+  color: #FFFFFF;
+  background-color: #303030;
+}
+
+.page-item.active .page-link {
+  border: 1px solid #FFFFFF;
+  background-color: #3797F6;
+}
+
 header {
   position: fixed;
   top: 0;

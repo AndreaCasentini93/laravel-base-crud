@@ -39,6 +39,7 @@
                     <input name="type" type="text" class="form-control" id="type" aria-describedby="emailHelp" placeholder="Inserisci Tipologia" value="{{ $comic->type }}">
                 </div>
                 <button type="submit" class="btn btn-primary">Salva</button>
+                <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Indietro</a>
                 <a href="{{ route('comics.index') }}" class="btn btn-primary">Lista Fumetti</a>
             </form>
         </div>
