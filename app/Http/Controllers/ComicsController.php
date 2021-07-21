@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comics;
+use Illuminate\Support\Str;
 
 class ComicsController extends Controller
 {
@@ -36,7 +37,8 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        dd($data);
     }
 
     /**
