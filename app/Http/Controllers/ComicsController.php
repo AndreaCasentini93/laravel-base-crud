@@ -45,7 +45,7 @@ class ComicsController extends Controller
         $comics->save();
         return redirect()
             ->route('comics.show', $comics->id)
-            ->with('message', 'Il Fumetto è stato aggiunto correttamente alla lista');
+            ->with('message', 'Il fumetto è stato aggiunto correttamente alla lista');
     }
 
     /**
@@ -77,9 +77,14 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comics $comic)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($data['title'], '-');
+        $comic->update($data);
+        return redirect()
+            ->route('comics.show', $comic->id)
+            ->with('message', 'Il fumetto è stato modificato correttamente');
     }
 
     /**

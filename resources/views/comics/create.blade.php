@@ -39,7 +39,7 @@
                     <input name="type" type="text" class="form-control" id="type" aria-describedby="emailHelp" placeholder="Inserisci Tipologia">
                 </div>
                 <button type="submit" class="btn btn-primary">Salva</button>
-                <a href="{{ route('comics.index') }}" class="btn btn-primary">Lista Fumetti</a>
+                <a href="{{ route('comics.index') }}" class="btn btn-secondary">Lista Fumetti</a>
             </form>
         </div>
     </section>
