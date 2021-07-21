@@ -4,6 +4,7 @@ header {
     left: 0;
     width: 100%;
     background-color: $header_bg;
+    box-shadow: 0 0 10px 1px $box_shadow;
     z-index: 1;
 
     ul {

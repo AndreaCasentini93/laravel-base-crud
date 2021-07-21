@@ -11980,6 +11980,7 @@ header {
   left: 0;
   width: 100%;
   background-color: #FFFFFF;
+  box-shadow: 0 0 10px 1px #808080;
   z-index: 1;
 }
 
@@ -12108,6 +12109,27 @@ header ul li a:hover {
 
 #show a {
   margin-top: 30px;
+}
+
+#create {
+  padding: 40px 0;
+  background-color: #F7F7F7;
+}
+
+#create h1,
+#create .h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #464646;
+}
+
+#create form {
+  width: calc(50% - 30px);
+  margin: 15px;
+}
+
+#create form div label {
+  color: #464646;
 }
 
 footer {

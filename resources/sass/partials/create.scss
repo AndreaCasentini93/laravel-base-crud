@@ -1,0 +1,21 @@
+#create {
+    padding: 40px 0;
+    background-color: $forms_bg;
+
+    h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: $link_color;
+    }
+
+    form {
+        width: calc(50% - 30px);
+        margin: 15px;
+
+        div {
+            label {
+                color: $link_color;
+            }
+        }
+    }
+}

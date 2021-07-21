@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
-@section('title', 'DC Comics | Index')
+@section('title', 'DC Comics | Lista Fumetti')
 
 @section('main-content')
     <section id="index">
         <div class="container">
-            <h1 class="text-center">Index DC Comics</h1>
+            <h1 class="text-center">Lista Fumetti DC Comics</h1>
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>

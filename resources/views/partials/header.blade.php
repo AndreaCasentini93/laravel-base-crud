@@ -8,7 +8,10 @@
                 <a href="{{ route('home') }}">Home</a>
             </li>
             <li class="{{ Route::currentRouteName() == 'comics.index'? 'active':'' }}">
-                <a href="{{ route('comics.index') }}">Index</a>
+                <a href="{{ route('comics.index') }}">Lista Fumetti</a>
+            </li>
+            <li class="{{ Route::currentRouteName() == 'comics.create'? 'active':'' }}">
+                <a href="{{ route('comics.create') }}">Aggiungi Fumetto</a>
             </li>
         </ul>
     </nav>
