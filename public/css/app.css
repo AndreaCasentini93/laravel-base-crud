@@ -11974,6 +11974,12 @@ a:hover {
   color: unset;
 }
 
+small,
+.small {
+  font-size: 12px;
+  color: #ff0000;
+}
+
 .page-item:last-child .page-link {
   color: #FFFFFF;
   background-color: #303030;

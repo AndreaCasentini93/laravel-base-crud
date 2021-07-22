@@ -37,9 +37,26 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->request->add(['slug' => Str::slug($request->title, '-')]);
         $data = $request->all();
-        $data['slug'] = Str::slug($data['title'], '-');
-
+        $request->validate(
+            [
+                'title' => 'required|max:50',
+                'slug' => 'required|max:100',
+                'description' => 'required',
+                'thumb' => 'required|max:255',
+                'price' => 'required|numeric|max:9999.99',
+                'series' => 'required:max:50',
+                'sale_date' => 'required|date',
+                'type' => 'required|max:15'
+            ],
+            [
+                'required' => 'Campo obbligatorio!',
+                'max' => 'Hai superato il limite supportato dal campo!',
+                'date' => 'Il campo accetta solo date!',
+                'numeric' => 'Il campo accetta solo numeri!'
+            ]
+        );
         $comics = new Comics();
         $comics->fill($data);
         $comics->save();
@@ -79,8 +96,26 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comics $comic)
     {
+        $request->request->add(['slug' => Str::slug($request->title, '-')]);
         $data = $request->all();
-        $data['slug'] = Str::slug($data['title'], '-');
+        $request->validate(
+            [
+                'title' => 'required|max:50',
+                'slug' => 'required|max:100',
+                'description' => 'required',
+                'thumb' => 'required|max:255',
+                'price' => 'required|numeric|max:9999.99',
+                'series' => 'required:max:50',
+                'sale_date' => 'required|date',
+                'type' => 'required|max:15'
+            ],
+            [
+                'required' => 'Campo obbligatorio!',
+                'max' => 'Hai superato il limite supportato dal campo!',
+                'date' => 'Il campo accetta solo date!',
+                'numeric' => 'Il campo accetta solo numeri!'
+            ]
+        );
         $comic->update($data);
         return redirect()
             ->route('comics.show', $comic->id)
