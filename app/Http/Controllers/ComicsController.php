@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Comics;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 
 class ComicsController extends Controller
 {
@@ -41,7 +42,7 @@ class ComicsController extends Controller
         $data = $request->all();
         $request->validate(
             [
-                'title' => 'required|max:50',
+                'title' => 'required|unique:comics|max:50',
                 'slug' => 'required|max:100',
                 'description' => 'required',
                 'thumb' => 'required|max:255',
@@ -54,7 +55,8 @@ class ComicsController extends Controller
                 'required' => 'Campo obbligatorio!',
                 'max' => 'Hai superato il limite supportato dal campo!',
                 'date' => 'Il campo accetta solo date!',
-                'numeric' => 'Il campo accetta solo numeri!'
+                'numeric' => 'Il campo accetta solo numeri!',
+                'title.unique' => 'Il titolo è già stato utilizzato!'
             ]
         );
         $comics = new Comics();
@@ -100,7 +102,11 @@ class ComicsController extends Controller
         $data = $request->all();
         $request->validate(
             [
-                'title' => 'required|max:50',
+                'title' => [
+                    'required',
+                    'max:50',
+                    Rule::unique('comics')->ignore($comic->id)
+                ],
                 'slug' => 'required|max:100',
                 'description' => 'required',
                 'thumb' => 'required|max:255',
@@ -113,7 +119,8 @@ class ComicsController extends Controller
                 'required' => 'Campo obbligatorio!',
                 'max' => 'Hai superato il limite supportato dal campo!',
                 'date' => 'Il campo accetta solo date!',
-                'numeric' => 'Il campo accetta solo numeri!'
+                'numeric' => 'Il campo accetta solo numeri!',
+                'title.unique' => 'Il titolo è già stato utilizzato!'
             ]
         );
         $comic->update($data);
